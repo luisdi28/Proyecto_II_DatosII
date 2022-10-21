@@ -6,7 +6,7 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: Proyecto_II
+# Project: Proyecto_II_DatosII
 # Configurations: Debug
 # =============================================================================
 # =============================================================================
@@ -14,7 +14,7 @@
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__Proyecto_II_Debug
+rule CXX_COMPILER__Proyecto_II_DatosII_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = /usr/bin/c++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule CXX_COMPILER__Proyecto_II_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__Proyecto_II_Debug
+rule CXX_EXECUTABLE_LINKER__Proyecto_II_DatosII_Debug
   command = $PRE_LINK && /usr/bin/c++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/luis/CLionProjects/Proyecto_II_DatosII -B/home/luis/CLionProjects/Proyecto_II_DatosII/cmake-build-debug
+  command = /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/andres/CLionProjects/Proyecto_II_DatosII -B/home/andres/CLionProjects/Proyecto_II_DatosII/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 
@@ -51,7 +51,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/ninja/linux/ninja $FILE_ARG -t clean $TARGETS
+  command = /opt/CLion/CLion-2022.2/clion-2022.2/bin/ninja/linux/ninja $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -59,6 +59,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/ninja/linux/ninja -t targets
+  command = /opt/CLion/CLion-2022.2/clion-2022.2/bin/ninja/linux/ninja -t targets
   description = All primary targets available:
 
