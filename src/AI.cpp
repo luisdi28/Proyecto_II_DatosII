@@ -1,5 +1,6 @@
-#include <iostream>
+#include<iostream>
 #include "../include/AI.h"
+#include "../include/GameState.h"
 
 //Seteo del rango de movimiento de las piezas
 extern Directions kingMoves[4];
@@ -69,7 +70,7 @@ void AI::getEnemyTeam(){
     }
 }
 
-//-- que obtiene el valor máximo
+//Método que obtiene el valor máximo
 int AI::findMax(int value1, int value2){
     if (value1 > value2) {
         return value1;
@@ -77,7 +78,7 @@ int AI::findMax(int value1, int value2){
     return value2;
 }
 
-//-- que obtiene el valor mínimo
+//Método que obtiene el valor mínimo
 int AI::findMin(int value1, int value2){
     if (value1 < value2) {
         return value1;
@@ -85,7 +86,7 @@ int AI::findMin(int value1, int value2){
     return value2;
 }
 
-//-- que obtiene la mejor pieza del enemigo
+//Método que obtiene la mejor pieza del enemigo
 int AI::enemyBestPiece(vector<Piece> pieceVector){
 
     int smallest = pieceVector[0].potential;
@@ -112,7 +113,7 @@ int AI::enemyBestPiece(vector<Piece> pieceVector){
     return smallestVector[randIndex];
 }
 
-//-- que obtiene la mejor pieza de la AI
+//Método que obtiene la mejor pieza de la AI
 int AI::bestPiece(vector<Piece> pieceVector){
 
     int largest = pieceVector[0].potential;
@@ -184,7 +185,7 @@ bool AI::makeMove(SDL_Event *event){
     return false;
 }
 
-//-- que calcula el valor
+//Método que calcula el valor
 int AI::valueCalculator(vector<Piece> teamCopy, vector<Piece> enemyTeamCopy){
 
     int value = 0;
@@ -331,7 +332,7 @@ bool AI::checkNode(vector<vector<int>> tempBoard, vector<Piece> teamCopy, vector
     return true;
 }
 
-//-- que obtiene el valor máximo
+//Método que obtiene el valor máximo
 int AI::maxValue(vector<vector<int>> tempBoard, vector<Piece> teamCopy, vector<Piece> enemyTeamCopy, int depth, Directions direction){
 
     bool killMove = false;
@@ -353,7 +354,7 @@ int AI::maxValue(vector<vector<int>> tempBoard, vector<Piece> teamCopy, vector<P
         }
     }
 
-    //Esto debería mover en el Tablero temporal
+    //Esto movueve en el Tablero temporal
     movePiece(tempBoard, teamCopy, currentIndex, x, y);
     updateKings(tempBoard, teamCopy, false);
     if (killMove) {
@@ -372,7 +373,7 @@ int AI::maxValue(vector<vector<int>> tempBoard, vector<Piece> teamCopy, vector<P
 
 }
 
-//-- que obtiene el movimiento mínimo
+//Método que obtiene el movimiento mínimo
 int AI::minMove(vector<vector<int>> tempboard, vector<Piece> teamCopy, vector<Piece> enemyTeamCopy, int depth){
 
     for(int index=0;index<enemyTeamCopy.size();index++){
@@ -393,7 +394,7 @@ int AI::minMove(vector<vector<int>> tempboard, vector<Piece> teamCopy, vector<Pi
     return enemyTeamCopy[bestPieceIndex].potential;
 }
 
-//-- que obtiene el valor mínimo
+//Método que obtiene el valor mínimo
 int AI::minValue(vector<vector<int>> tempBoard, vector<Piece> teamCopy, vector<Piece> enemyTeamCopy, int depth, Directions direction){
 
     bool killMove = false;
@@ -422,7 +423,7 @@ int AI::minValue(vector<vector<int>> tempBoard, vector<Piece> teamCopy, vector<P
     if (killMove) {
         updateTeam(tempBoard, teamCopy, false);
         if (teamCopy.size()<=0) {
-            //smallest number
+            //número más pequeño
             return -1 * WIN_VALUE;
         }
     }
@@ -436,7 +437,7 @@ int AI::minValue(vector<vector<int>> tempBoard, vector<Piece> teamCopy, vector<P
 
 }
 
-//-- que obtiene el movimiento máximo
+//Método que obtiene el movimiento máximo
 int AI::maxMove(vector<vector<int>> tempboard, vector<Piece> teamCopy, vector<Piece> enemyTeamCopy, int depth){
 
     for(int index=0;index<teamCopy.size();index++){

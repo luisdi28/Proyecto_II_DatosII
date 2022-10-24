@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Proyecto_II_DatosII.dir/src/main.cpp.o -o Proyecto_II_DatosII 
