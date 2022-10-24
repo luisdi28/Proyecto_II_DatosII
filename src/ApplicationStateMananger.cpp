@@ -9,6 +9,12 @@ ApplicationStateManager::ApplicationStateManager(){
     currentState->stateEnter();
 }
 
+//Constructor de la clase
+ApplicationStateManager::~ApplicationStateManager(){
+    delete currentState;
+    currentState = NULL;
+}
+
 //Método que setea los eventos de la aplicación
 void ApplicationStateManager::stateEvent(){
     currentState->stateEvent();
