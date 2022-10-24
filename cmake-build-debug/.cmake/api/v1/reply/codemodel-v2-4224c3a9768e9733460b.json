@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/andres/CLionProjects/Proyecto_II_DatosII/cmake-build-debug",
-		"source" : "/home/andres/CLionProjects/Proyecto_II_DatosII"
+		"build" : "/home/luis/CLionProjects/Proyecto_II_DatosII/cmake-build-debug",
+		"source" : "/home/luis/CLionProjects/Proyecto_II_DatosII"
 	},
 	"version" : 
 	{

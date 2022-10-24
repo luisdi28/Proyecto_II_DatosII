@@ -1,3 +1,3 @@
-/home/andres/CLionProjects/Proyecto_II_DatosII/cmake-build-debug/CMakeFiles/Proyecto_II_DatosII.dir
-/home/andres/CLionProjects/Proyecto_II_DatosII/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/andres/CLionProjects/Proyecto_II_DatosII/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/luis/CLionProjects/Proyecto_II_DatosII/cmake-build-debug/CMakeFiles/Proyecto_II_DatosII.dir
+/home/luis/CLionProjects/Proyecto_II_DatosII/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/luis/CLionProjects/Proyecto_II_DatosII/cmake-build-debug/CMakeFiles/rebuild_cache.dir
