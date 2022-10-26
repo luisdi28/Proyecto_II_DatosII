@@ -38,7 +38,6 @@ GameState::GameState(){
             userQuit = true;
             break;
     }
-    //Player2 = new oldAI(false, Board, boardButtons);
 
 }
 
@@ -84,7 +83,7 @@ void GameState::stateEvent(){
                     Player2->turn = true;
                     Player2->updateTeam();
                     cout<<*Board<<endl;
-                    // Breaks to continue in main loop //
+                    // Breaks para continuar en el loop principal //
                     break;
                 }
             }
@@ -96,7 +95,7 @@ void GameState::stateEvent(){
                     Player1->turn = true;
                     Player1->updateTeam();
                     cout<<*Board<<endl;
-                    // Breaks to continue in main loop //
+                    // Breaks para continuar en el loop principal //
                     break;
                 }
             }
@@ -133,7 +132,7 @@ bool GameState::loadMedia(){
     bool indent = true;
     int xStart;
 
-    // Sets points for buttons (top left of button)
+    //Setea puntos para el botón (arriba a la izquierda del botón)
     for(int y=0;y<SCREEN_HEIGHT;y+=BUTTON_HEIGHT){
         if (indent) {
             xStart = BUTTON_WIDTH;
@@ -150,7 +149,8 @@ bool GameState::loadMedia(){
     }
     return initSuccessfulful;
 }
-//88854416514
+
+//**//
 //Método que establece el fin del juego
 bool GameState::gameOver(){
     if (Player1->team.size() == 0 || Player2->team.size() == 0) {
@@ -169,15 +169,15 @@ StateEnum GameState::stateUpdate(){
 
 //Método que renderiza el juego
 void GameState::stateRender(){
-    // Render stuff here //
-    // Light wood color //
+    //Renderiza informacón aquí  //
+    // Color madera claro//
     SDL_SetRenderDrawColor(gRenderer, 0xD4, 0x9A, 0x6A, 0xFF);
-    // Refreshs screen //
+    // Refresca la pantalla //
     SDL_RenderClear(gRenderer);
 
     Board->drawBoard();
 
-    // Render whole team //
+    // Renderiza el equipo completo //
     int index = 0;
     for (int y=0; y<8; y++) {
         for (int x=0; x<8; x++) {

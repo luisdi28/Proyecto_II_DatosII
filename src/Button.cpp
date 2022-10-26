@@ -1,9 +1,8 @@
 #include "../include/Button.h"
 #include "../include/GameState.h"
 #include "../include/Texture.h"
-#include "../include/Application.h"
 
-//Método que crea lel botón
+//Método que crea el/los botones
 Button::Button(){
     buttonPoint.x = 0;
     buttonPoint.y = 0;
@@ -23,7 +22,7 @@ void Button::setPoint(int x, int y){
 
 //Método que renderiza el botón
 void Button::render(int sprite){
-    //Render button with spritesheet
+    //Renderiza el botón con spritesheet
     spriteSheetTexture.render(buttonPoint.x, buttonPoint.y, &spriteClips[sprite]);
 }
 
@@ -33,20 +32,20 @@ bool Button::insideButton(int buttonWidth, int buttonHeight){
     int x,y;
     bool insideButton = true;
     SDL_GetMouseState(&x,&y);
-    
-    // Arriba del botón button //
+
+    // Arriba del botón //
     if(y < buttonPoint.y){
         insideButton = false;
     }
-    // Debajo del botón //
+        // Debajo del botón //
     else if (y > buttonPoint.y + buttonHeight){
         insideButton = false;
     }
-    // Izquierda del botón button //
+        // Izquierda del botón //
     else if (x < buttonPoint.x) {
         insideButton = false;
     }
-    // Derecha del botón button  //
+        // Derecha del botón //
     else if (x > buttonPoint.x + buttonWidth){
         insideButton = false;
     }
@@ -54,12 +53,12 @@ bool Button::insideButton(int buttonWidth, int buttonHeight){
     return insideButton;
 }
 
-//-- que obtiene el punto "x" del botón
+//Método que obtiene el punto "x" del botón
 int Button::getButtonPointX(){
     return buttonPoint.x;
 }
 
-//-- que obtiene el punto "y" del botón
+//Método que obtiene el punto "y" del botón
 int Button::getButtonPointY(){
     return buttonPoint.y;
 }

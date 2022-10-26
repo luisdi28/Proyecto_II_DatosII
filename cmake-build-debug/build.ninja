@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Proyecto_II_DatosII
+# Project: Proyecto_II
 # Configurations: Debug
 # =============================================================================
 
@@ -39,44 +39,44 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/andres/CLionProjects/Proyecto_II_DatosII/cmake-build-debug/
+cmake_ninja_workdir = /home/luis/CLionProjects/Proyecto$ II/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target Proyecto_II_DatosII
+# Object build statements for EXECUTABLE target Proyecto_II
 
 
 #############################################
-# Order-only phony target for Proyecto_II_DatosII
+# Order-only phony target for Proyecto_II
 
-build cmake_object_order_depends_target_Proyecto_II_DatosII: phony || CMakeFiles/Proyecto_II_DatosII.dir
+build cmake_object_order_depends_target_Proyecto_II: phony || CMakeFiles/Proyecto_II.dir
 
-build CMakeFiles/Proyecto_II_DatosII.dir/src/main.cpp.o: CXX_COMPILER__Proyecto_II_DatosII_Debug /home/andres/CLionProjects/Proyecto_II_DatosII/src/main.cpp || cmake_object_order_depends_target_Proyecto_II_DatosII
-  DEP_FILE = CMakeFiles/Proyecto_II_DatosII.dir/src/main.cpp.o.d
+build CMakeFiles/Proyecto_II.dir/src/main.cpp.o: CXX_COMPILER__Proyecto_II_Debug /home/luis/CLionProjects/Proyecto$ II/src/main.cpp || cmake_object_order_depends_target_Proyecto_II
+  DEP_FILE = CMakeFiles/Proyecto_II.dir/src/main.cpp.o.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles/Proyecto_II_DatosII.dir
-  OBJECT_FILE_DIR = CMakeFiles/Proyecto_II_DatosII.dir/src
+  OBJECT_DIR = CMakeFiles/Proyecto_II.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto_II.dir/src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Proyecto_II_DatosII
+# Link build statements for EXECUTABLE target Proyecto_II
 
 
 #############################################
-# Link the executable Proyecto_II_DatosII
+# Link the executable Proyecto_II
 
-build Proyecto_II_DatosII: CXX_EXECUTABLE_LINKER__Proyecto_II_DatosII_Debug CMakeFiles/Proyecto_II_DatosII.dir/src/main.cpp.o
+build Proyecto_II: CXX_EXECUTABLE_LINKER__Proyecto_II_Debug CMakeFiles/Proyecto_II.dir/src/main.cpp.o
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/Proyecto_II_DatosII.dir
+  OBJECT_DIR = CMakeFiles/Proyecto_II.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = Proyecto_II_DatosII
-  TARGET_PDB = Proyecto_II_DatosII.dbg
+  TARGET_FILE = Proyecto_II
+  TARGET_PDB = Proyecto_II.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andres/CLionProjects/Proyecto_II_DatosII/cmake-build-debug && /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/bin/ccmake -S/home/andres/CLionProjects/Proyecto_II_DatosII -B/home/andres/CLionProjects/Proyecto_II_DatosII/cmake-build-debug
+  COMMAND = cd "/home/luis/CLionProjects/Proyecto II/cmake-build-debug" && /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/bin/ccmake -S"/home/luis/CLionProjects/Proyecto II" -B"/home/luis/CLionProjects/Proyecto II/cmake-build-debug"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -88,7 +88,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andres/CLionProjects/Proyecto_II_DatosII/cmake-build-debug && /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/andres/CLionProjects/Proyecto_II_DatosII -B/home/andres/CLionProjects/Proyecto_II_DatosII/cmake-build-debug
+  COMMAND = cd "/home/luis/CLionProjects/Proyecto II/cmake-build-debug" && /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S"/home/luis/CLionProjects/Proyecto II" -B"/home/luis/CLionProjects/Proyecto II/cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -104,9 +104,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /home/andres/CLionProjects/Proyecto_II_DatosII/cmake-build-debug
+# Folder: /home/luis/CLionProjects/Proyecto II/cmake-build-debug
 
-build all: phony Proyecto_II_DatosII
+build all: phony Proyecto_II
 
 # =============================================================================
 # Built-in targets
@@ -115,14 +115,14 @@ build all: phony Proyecto_II_DatosII
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /opt/CLion/CLion-2022.2/clion-2022.2/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+build ../CMakeLists.txt /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
 
 
 #############################################

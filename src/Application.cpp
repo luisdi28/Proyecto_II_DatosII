@@ -2,6 +2,7 @@
 #include "../include/ApplicationState.h"
 #include "../include/ApplicationStateManager.h"
 #include "../include/Texture.h"
+
 int currentSprite = 0;
 SDL_Window *gWindow;
 SDL_Renderer *gRenderer;

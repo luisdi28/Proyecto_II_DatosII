@@ -21,7 +21,7 @@ AI::~AI(){
 
 //Método que actualiza el equipo de la AI
 void AI::updateTeam(vector<vector<int>> &tempBoard, vector<Piece> &teamCopy, bool enemy) {
-    // Updates team when team.size() has been altered
+    // Actualiza el equipo cuanso team.size() ha sido alterado
     int teamNumber = TEAM_NUMBER;
 
     if (enemy) {
@@ -290,7 +290,7 @@ bool AI::killCheckArea(vector<vector<int>> tempBoard, int x, int y, Directions c
     if(!changeWithDirection(x, y, checkDirection, enemy)){
         return false;
     }
-    //Retorna true si la dirección está libre/vacía//
+    //Retorna true si la dirección está libre (vacía)
     if(tempBoard[x][y] == EMPTY_PIECE){
         return true;
     }
@@ -354,7 +354,7 @@ int AI::maxValue(vector<vector<int>> tempBoard, vector<Piece> teamCopy, vector<P
         }
     }
 
-    //Esto movueve en el Tablero temporal
+    //Esto mueve en el Tablero temporal
     movePiece(tempBoard, teamCopy, currentIndex, x, y);
     updateKings(tempBoard, teamCopy, false);
     if (killMove) {
@@ -417,7 +417,7 @@ int AI::minValue(vector<vector<int>> tempBoard, vector<Piece> teamCopy, vector<P
         }
     }
 
-    //This should move on the tempBoard
+    //Esto mueve en el tablero temporal
     movePiece(tempBoard, enemyTeamCopy, enemyCurrentIndex, x, y);
     updateKings(tempBoard, enemyTeamCopy, true);
     if (killMove) {

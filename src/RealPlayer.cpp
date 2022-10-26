@@ -18,28 +18,28 @@ RealPlayer::~RealPlayer(){
 bool RealPlayer::makeMove(SDL_Event* event){
 
     if (event->type == SDL_MOUSEBUTTONDOWN) {
-        
-        // Selecting state for inital piece //
+
+        // Selecciona el estado para la pieza inicial //
         if (!selectingState) {
             killWasMade = false;
             for (int index=0; index<TOTAL_BUTTONS; index++) {
                 if (boardButtons[index].insideButton(BUTTON_WIDTH, BUTTON_HEIGHT)) {
-                    // Player selects a piece to move //
+                    // El jugador selecciona una pieza a mover//
                     selectPiece(boardButtons[index].getButtonPointX()/80, boardButtons[index].getButtonPointY()/80);
                     break;
                 }
             }
         }
-        // Selecting for the piece to be moved //
+            // Seleccionar una pieza para ser movida//
         else{
             for (int index=0; index<TOTAL_BUTTONS; index++) {
                 if (boardButtons[index].insideButton(BUTTON_WIDTH,BUTTON_HEIGHT)) {
-                    // Player selects where the piece should move //
-                    
+                    // El jugador selecciona donde debería ser movida la pieza//
+
                     if (selectedLocationIsValid(currentIndex,boardButtons[index].getButtonPointX()/80, boardButtons[index].getButtonPointY()/80, false)) {
                         movePiece(Board->virtualBoard, team, currentIndex, boardButtons[index].getButtonPointX()/80, boardButtons[index].getButtonPointY()/80);
                         Board->turnHighLightOff();
-                        
+
                         if (killWasMade) {
                             selectPiece(team[killerPeiceIndex].x, team[killerPeiceIndex].y);
                             if (Board->validLocations.size() == 0) {
@@ -64,14 +64,14 @@ bool RealPlayer::makeMove(SDL_Event* event){
 
 //Método que permite al jugador escoger la ficha que moverá
 void RealPlayer::selectPiece(int x, int y){
-    // SELECT PIECE //
-    // When a piece hasn't been selected yet, and the button currently selected doesn't have a piece inside //
+    // SELECT PIECE Seleccionar la pieza//
+    // Cuando una pieza no ha sido seleccionada aún y el botón actualmente seleccionado no tiene una pieza adentro//
     if(sameTeam(Board->virtualBoard[x][y], TEAM_NUMBER)){
-            currentIndex = pieceTeamIndexByXY(x, y);
-            Board->turnHighLightOn(x, y);
-            highlightValidMoves();
-            selectingState = true;
-            cout << "Selected piece is:\t(" << x << ", " << y << ")" <<endl;
+        currentIndex = pieceTeamIndexByXY(x, y);
+        Board->turnHighLightOn(x, y);
+        highlightValidMoves();
+        selectingState = true;
+        cout << "Selected piece is:\t(" << x << ", " << y << ")" <<endl;
     }
     else{
         cout<<"Piece isn't apart of your team"<<endl;
@@ -83,7 +83,7 @@ bool RealPlayer::selectedLocationIsValid(int currentIndex, int x, int y, bool fo
     bool locationIsValid = false;
     if (Board->virtualBoard[x][y] == EMPTY_PIECE) {
 
-        // case 1: moving in a 3x3 square centered at the origin //
+        // caso 1: mover en un cuadrdo centrado de 3x3 en el origen //
         if (abs(x - team[currentIndex].x) == 1 && abs(y - team[currentIndex].y) == 1 && !killWasMade) {
 
             // case 1.1: piece is a king //
@@ -91,27 +91,27 @@ bool RealPlayer::selectedLocationIsValid(int currentIndex, int x, int y, bool fo
                 locationIsValid = true;
             }
 
-            // case 1.2: piece isn't a king //
+                // caso 1.2: la pieza no es una Reina //
             else if (y - team[currentIndex].y == ONE) {
                 locationIsValid = true;
             }
         }
 
-        // case 2: moving in a 5x5 square centered at the origin to kill a piece //
+            // caso 2: mover en un cuadrado centrado de 5x5 en el origen para matar una pieza //
         else if (abs(x - team[currentIndex].x) == 2 && abs(y - team[currentIndex].y) == 2 && sameTeam(Board->virtualBoard[(x + team[currentIndex].x)/2][(y + team[currentIndex].y)/2],ENEMY_TEAM_NUMBER)) {
 
-            // case 2.1: piece is a king //
+            // caso 2.1: la pieza es una reina //
             if (team[currentIndex].isKing()) {
                 locationIsValid = true;
             }
 
-            // case 2.2: piece isn't a king //
+                // caso 2.2: la pieza no es una reina //
             else if (y - team[currentIndex].y == 2*ONE) {
                 locationIsValid = true;
             }
         }
     }
-    // case 3: selects own piece to switch selection //
+        // caso 3: selección de pieza propia para cambiar la selección //
     else if(sameTeam(Board->virtualBoard[x][y],TEAM_NUMBER) && !forHighlight && !killWasMade){
         Board->turnHighLightOff();
         selectPiece(x, y);
@@ -133,7 +133,7 @@ void RealPlayer::highlightValidMoves() {
         x = team[currentIndex].x + i;
         for (int j = -2; j <=2; j++){
             y = team[currentIndex].y + j;
-            
+
             if (x >= 0 && x < 8 && y >= 0 && y < 8) {
                 if (selectedLocationIsValid(currentIndex,x, y, true)) {
                     pointXY pointToHighlight = {x,y};
@@ -143,8 +143,3 @@ void RealPlayer::highlightValidMoves() {
         }
     }
 }
-
-
-
-
-
