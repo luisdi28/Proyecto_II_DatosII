@@ -8,6 +8,7 @@ ApplicationStateManager::ApplicationStateManager(){
     currentState = new MenuState();
     currentState->stateEnter();
 }
+
 //Constructor de la clase
 ApplicationStateManager::~ApplicationStateManager(){
     delete currentState;
@@ -18,7 +19,6 @@ ApplicationStateManager::~ApplicationStateManager(){
 void ApplicationStateManager::stateEvent(){
     currentState->stateEvent();
 }
-
 //Método que actualiza los eventos de la aplicación
 StateEnum ApplicationStateManager::stateUpdate(){
     return currentState->stateUpdate();
@@ -46,10 +46,10 @@ StateEnum ApplicationStateManager::getCurrentStateEnum(){
 
 //Método que cambia el estado de los eventos de la aplicación
 void ApplicationStateManager::changeStates(){
-    
+
     delete currentState;
     currentState = NULL;
-    
+
     switch (currentStateEnum) {
         case MENU_STATE:
             currentState = new MenuState;
