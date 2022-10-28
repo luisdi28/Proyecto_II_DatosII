@@ -37,15 +37,15 @@ bool Button::insideButton(int buttonWidth, int buttonHeight){
     if(y < buttonPoint.y){
         insideButton = false;
     }
-        // Debajo del botón //
+    // Debajo del botón //
     else if (y > buttonPoint.y + buttonHeight){
         insideButton = false;
     }
-        // Izquierda del botón //
+    // Izquierda del botón //
     else if (x < buttonPoint.x) {
         insideButton = false;
     }
-        // Derecha del botón //
+    // Derecha del botón //
     else if (x > buttonPoint.x + buttonWidth){
         insideButton = false;
     }

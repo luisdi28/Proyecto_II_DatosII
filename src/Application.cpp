@@ -19,7 +19,7 @@ Texture spriteSheetTexture;
 Application::Application(){
     gWindow=NULL;
     gRenderer=NULL;
-    // Checks if init was able to excute //
+    // Chequea si el init está disponible para ser ejecutado //
     if(!init()){
         cout<<"Could not load application!"<<endl;
     }

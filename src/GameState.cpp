@@ -68,7 +68,7 @@ void GameState::stateEvent(){
     // Loop (Ciclo) del evento //
     while(SDL_PollEvent(&event)!=0){
 
-        // Quits game //
+        // TERMINA EL JUEGO //
         if(event.type==SDL_QUIT)
         {
             userQuit=true;
@@ -115,16 +115,17 @@ bool GameState::loadMedia(){
         initSuccessfulful = false;
     }
     // Inicializa las piezas del juego de Damas //
-    // Pieza Roja //
+
+    // Pieza Dama Roja //
     SDL_Rect redPeice = {0,0,BUTTON_WIDTH,BUTTON_HEIGHT};
     spriteClips.push_back(redPeice);
-    // Pieza Negra //
+    // Pieza Dama Negra //
     SDL_Rect blackPeice = {BUTTON_WIDTH,0,BUTTON_WIDTH,BUTTON_HEIGHT};
     spriteClips.push_back(blackPeice);
-    // Pieza Dama Roja //
+    // Pieza Reina Roja //
     SDL_Rect redKing = {BUTTON_WIDTH * 2, 0, BUTTON_WIDTH, BUTTON_HEIGHT};
     spriteClips.push_back(redKing);
-    // Pieza Dama Negra //
+    // Pieza Reina Negra //
     SDL_Rect blackKing = {BUTTON_WIDTH * 3, 0, BUTTON_WIDTH, BUTTON_HEIGHT};
     spriteClips.push_back(blackKing);
 
@@ -159,7 +160,7 @@ bool GameState::gameOver(){
     return false;
 }
 
-//Método que actializa el estado del juego
+//Método que actualiza el estado del juego
 StateEnum GameState::stateUpdate(){
     if (currentStateEnum != nextStateEnum) {
         return nextStateEnum;
@@ -169,8 +170,8 @@ StateEnum GameState::stateUpdate(){
 
 //Método que renderiza el juego
 void GameState::stateRender(){
-    //Renderiza informacón aquí  //
-    // Color madera claro//
+    // Renderiza informacón aquí //
+    // Color madera claro //
     SDL_SetRenderDrawColor(gRenderer, 0xD4, 0x9A, 0x6A, 0xFF);
     // Refresca la pantalla //
     SDL_RenderClear(gRenderer);

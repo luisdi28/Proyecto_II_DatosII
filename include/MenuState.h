@@ -40,5 +40,4 @@ private:
     bool userQuit;
 };
 
-
 #endif /* MenuState_h */

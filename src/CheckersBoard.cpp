@@ -57,7 +57,7 @@ void CheckersBoard::drawBoard(){
 
     bool indent = false;
     int xStart;
-    // Dark wood colour //
+    // Color madera obscura //
     SDL_SetRenderDrawColor( gRenderer, 0x55, 0x27, 0x00, 0xFF );
 
     for(int y=0;y<SCREEN_HEIGHT;y+=BUTTON_HEIGHT){
@@ -81,19 +81,19 @@ void CheckersBoard::drawBoard(){
 //Método que dibuja las líneas en el tablero
 void CheckersBoard::drawHighlights() {
     if (highLight) {
-        // Set to white //
+        // Setea en blanco //
         SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
-        // Create the outline rect //
+        // Crea la línea de contorno //
         SDL_Rect outLine = {highLightSelected.x, highLightSelected.y, BUTTON_WIDTH, BUTTON_HEIGHT};
-        // Call to render //
+        // Llama a renderizar //
         SDL_RenderDrawRect(gRenderer, &outLine);
 
-        // Set to white //
+        // Setea en blanco //
         SDL_SetRenderDrawColor( gRenderer, 0x55, 0xFF, 0x55, 0xFF );
 
         for (int indexOfValidMoves = 0; indexOfValidMoves < validLocations.size(); indexOfValidMoves++) {
             SDL_Rect outLineValid = {validLocations[indexOfValidMoves].x * 80, validLocations[indexOfValidMoves].y * 80, BUTTON_WIDTH, BUTTON_HEIGHT};
-            // Call to render //
+            // Llama a renderizar //
             SDL_RenderDrawRect(gRenderer, &outLineValid);
         }
     }

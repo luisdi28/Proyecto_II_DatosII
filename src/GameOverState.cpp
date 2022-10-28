@@ -7,7 +7,6 @@ GameOverState::GameOverState(){
     currentStateEnum = GAME_OVER_STATE;
     nextStateEnum = GAME_OVER_STATE;
     userQuit = false;
-
 }
 
 //Constructor de la clase
@@ -23,10 +22,10 @@ void GameOverState::stateEnter(){
 //Método que setea el evento del juego
 void GameOverState::stateEvent(){
     SDL_Event event;
-    // Event loop //
+    // Loop del evento //
     while(SDL_PollEvent(&event)!=0){
 
-        // Quits game //
+        // Termina el juego //
         if(event.type==SDL_QUIT)
         {
             userQuit=true;
@@ -44,9 +43,9 @@ StateEnum GameOverState::stateUpdate(){
 
 //Método que renderiza el juego
 void GameOverState::stateRender(){
-    // Light wood color //
+    // Color madera claro //
     SDL_SetRenderDrawColor(gRenderer, 0xD4, 0x9A, 0x6A, 0xFF);
-    // Refreshs screen //
+    // Refresca la pantalla //
     SDL_RenderClear(gRenderer);
 }
 

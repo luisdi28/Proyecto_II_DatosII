@@ -31,5 +31,4 @@ private:
 
 };
 
-//extern CheckersBoard Board;
 #endif /* CheckersBoard_h */

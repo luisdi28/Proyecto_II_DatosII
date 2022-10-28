@@ -21,7 +21,7 @@ AI::~AI(){
 
 //Método que actualiza el equipo de la AI
 void AI::updateTeam(vector<vector<int>> &tempBoard, vector<Piece> &teamCopy, bool enemy) {
-    // Actualiza el equipo cuanso team.size() ha sido alterado
+    // Actualiza el equipo cuando team.size() ha sido alterado
     int teamNumber = TEAM_NUMBER;
 
     if (enemy) {
@@ -53,7 +53,7 @@ void AI::updateKings(vector<vector<int>> &tempBoard, vector<Piece> &teamCopy, bo
     }
 }
 
-//Método que obtiene elas fichas del equipo enemigo
+//Método que obtiene las fichas del equipo enemigo
 void AI::getEnemyTeam(){
     enemyTeam.clear();
     for(int x=0;x<8;x++){
@@ -169,13 +169,13 @@ bool AI::makeMove(SDL_Event *event){
     int x = team[bestPieceIndex].x;
     int y = team[bestPieceIndex].y;
 
-    //Se asegura que el movimiento no está fuera de los límites.//
+    //Se asegura que el movimiento no está fuera de los límites//
     if (team[bestPieceIndex].potential != OUT_OF_BOUND) {
 
         changeWithDirection(x, y, team[bestPieceIndex].bestDirection, false);
 
         if(sameTeam(Board->virtualBoard[x][y],ENEMY_TEAM_NUMBER)){
-            //Lo cambia de nuevo por mover dos unidades diagonalmente//
+            //Lo cambia de nuevo para mover dos unidades diagonalmente//
             changeWithDirection(x, y, team[bestPieceIndex].bestDirection, false);
         }
         cout<<") best move: (" << x << "," << y <<")"<< endl;
@@ -319,7 +319,7 @@ bool AI::checkNode(vector<vector<int>> tempBoard, vector<Piece> teamCopy, vector
         return false;
     }
 
-    //Ficha del mismo equipo en el camino
+    //Ficha del mismo equipo que se encuentra en el camino
     if(sameTeam(tempBoard[x][y], teamNumber)){
         return false;
     }
@@ -354,7 +354,7 @@ int AI::maxValue(vector<vector<int>> tempBoard, vector<Piece> teamCopy, vector<P
         }
     }
 
-    //Esto mueve en el Tablero temporal
+    //Esto mueve en el tablero temporal
     movePiece(tempBoard, teamCopy, currentIndex, x, y);
     updateKings(tempBoard, teamCopy, false);
     if (killMove) {

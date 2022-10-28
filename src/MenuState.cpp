@@ -2,7 +2,7 @@
 #include "../include/Texture.h"
 #include "../include/Button.h"
 
-//Método que establece el estado del menu del juego
+//Método que establece el estado del menú del juego
 MenuState::MenuState(){
     BUTTON_WIDTH = 346;
     BUTTON_HEIGHT = 40;
@@ -21,7 +21,7 @@ MenuState::~MenuState(){
     spriteClips.clear();
 }
 
-//Método que establece el estado del menu del juego
+//Método que establece el estado del menú del juego
 void MenuState::stateEnter(){
     if (!loadMedia()) {
         cout<<"Could not load media"<<endl;
@@ -53,7 +53,7 @@ void MenuState::stateEvent(){
             }
         }
 
-        // Checks if a button was clicked
+        // Chequea si un botón fue clickeado
         if (event.type == SDL_MOUSEBUTTONDOWN) {
             for (int index = 0; index < 3; index++) {
                 if (hover[index]) {
@@ -102,15 +102,15 @@ bool MenuState::loadMedia(){
     }
 
 
-    // SpriteClips
-    // Standard Clips
+    //Clips Sprite
+    //Clips Estándar
     SDL_Rect localMultiplayer = {0, 0, 346, 40};
     spriteClips.push_back(localMultiplayer);
     SDL_Rect singlePlayer = {0, 40, 346, 40};
     spriteClips.push_back(singlePlayer);
     SDL_Rect aI = {0, 80, 346, 40};
     spriteClips.push_back(aI);
-    // Hover Clips
+    //Clips Hover
     SDL_Rect localMultiplayerHover = {346, 0, 346, 40};
     spriteClips.push_back(localMultiplayerHover);
     SDL_Rect singlePlayerHover = {346, 40, 346, 40};

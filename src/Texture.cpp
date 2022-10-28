@@ -36,8 +36,8 @@ bool Texture::loadFromFile(std::string path){
         }
         SDL_FreeSurface(loadedSurface);
     }
-        currentTexture = newTexture;
-        return currentTexture != NULL;
+    currentTexture = newTexture;
+    return currentTexture != NULL;
 }
 
 //Método que renderiza los elementos
@@ -56,11 +56,7 @@ void Texture::render(int x, int y, SDL_Rect *clip){
     SDL_RenderCopy(gRenderer, currentTexture, clip, &renderSpace);
 }
 
-<<<<<<< HEAD
 //Método que libera las texturas
-=======
-//Método que --
->>>>>>> origin/master
 void Texture::free(){
     if(currentTexture!=NULL){
         SDL_DestroyTexture(currentTexture);

@@ -1,7 +1,7 @@
 #include "../include/RealPlayer.h"
 #include "../include/GameState.h"
 
-//Método que identifica que el que está jugando es el usuario
+//Método que identifica que quien está jugando es el usuario
 RealPlayer::RealPlayer(bool topSideOfBoard, CheckersBoard *board, Button *buttons): Player(topSideOfBoard, board, buttons){
     selectingState = false;
 }
@@ -24,13 +24,13 @@ bool RealPlayer::makeMove(SDL_Event* event){
             killWasMade = false;
             for (int index=0; index<TOTAL_BUTTONS; index++) {
                 if (boardButtons[index].insideButton(BUTTON_WIDTH, BUTTON_HEIGHT)) {
-                    // El jugador selecciona una pieza a mover//
+                    // El jugador selecciona una pieza a mover //
                     selectPiece(boardButtons[index].getButtonPointX()/80, boardButtons[index].getButtonPointY()/80);
                     break;
                 }
             }
         }
-            // Seleccionar una pieza para ser movida//
+            // Seleccionar una pieza para ser movida //
         else{
             for (int index=0; index<TOTAL_BUTTONS; index++) {
                 if (boardButtons[index].insideButton(BUTTON_WIDTH,BUTTON_HEIGHT)) {
@@ -64,8 +64,8 @@ bool RealPlayer::makeMove(SDL_Event* event){
 
 //Método que permite al jugador escoger la ficha que moverá
 void RealPlayer::selectPiece(int x, int y){
-    // SELECT PIECE Seleccionar la pieza//
-    // Cuando una pieza no ha sido seleccionada aún y el botón actualmente seleccionado no tiene una pieza adentro//
+    // Seleccionar la pieza//
+    // Cuando una pieza no ha sido seleccionada aún y el botón actualmente seleccionado no tiene una pieza adentro //
     if(sameTeam(Board->virtualBoard[x][y], TEAM_NUMBER)){
         currentIndex = pieceTeamIndexByXY(x, y);
         Board->turnHighLightOn(x, y);

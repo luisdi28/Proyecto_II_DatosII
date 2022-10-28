@@ -44,5 +44,4 @@ private:
     bool userQuit;
 };
 
-
 #endif /* GameState_h */

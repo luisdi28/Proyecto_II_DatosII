@@ -22,7 +22,7 @@ bool Piece::isKing() {
     return king;
 }
 
-//Método que se encarga de convertir una pieza a Reina
+//Método que se encarga de convertir una pieza en Reina
 void Piece::makeKing() {
     king = true;
 }

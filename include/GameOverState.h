@@ -18,5 +18,3 @@ private:
 };
 
 #endif /* GameOverState_h */
-
-#endif //PROYECTO_II_DATOSII_GAMEOVERSTATE_H
