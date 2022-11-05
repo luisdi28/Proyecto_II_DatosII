@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/luis/Descargas/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/luis/Descargas/CLion-2022.2.3/clion-2022.2.3/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/luis/Descargas/CLion-2022.2.4/clion-2022.2.4/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
